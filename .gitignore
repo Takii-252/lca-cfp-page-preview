@@ -1,0 +1,45 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Local leftovers from the source copy. Keep only assets used by this LP.
+public/*.png
+!public/hero_bg_realistic.png
+!public/problem_icon_1.png
+!public/problem_icon_2.png
+!public/problem_icon_3.png
+!public/reason_icon_engineer.png
+!public/reason_icon_calculation.png
+!public/reason_icon_compliance.png
+!public/industry_auto_1773122610393.png
+!public/industry_steel_1773122623070.png
+!public/industry_paper_1773122634432.png
+!public/industry_chem_1773122647243.png
+!public/feature_label_1773123144475.png
+!public/feature_supply_1773123157967.png
+!public/feature_sim_1773123175505.png
+public/vite.svg
+src/Counter.jsx
+src/assets/
+src/todo/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
