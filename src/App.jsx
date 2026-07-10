@@ -206,33 +206,48 @@ function ReasonsToChoose() {
 // 3. 導入実績（Achievements）
 function Achievements() {
     const achievements = [
-        { industry: '完成車メーカー', image: './industry_auto_1773122610393.png', type: '排出量算定支援', details: ['新車のCO2算定', '使用時CO2シミュレーション', '仕入先データ収集・整備', '材料データベース構築', '電池のCFP算定'] },
-        { industry: '鉄鋼メーカー', image: './industry_steel_1773122623070.png', type: 'CFP算定システム導入', details: ['EPDラベル取得', 'CBAM対応算定', '団体加入時の排出量データ作成', '新製法の排出量シミュレーション'] },
-        { industry: '製紙メーカー', image: './industry_paper_1773122634432.png', type: '工場別CO2算定', details: ['工場単位の排出量算定', '製品単位計算条件設定', '算定結果検証'] },
-        { industry: '化学メーカー', image: './industry_chem_1773122647243.png', type: 'CFP算定', details: ['発泡製品のCFP算定', 'ラベルのCFP算定', '算定マニュアル作成'] }
+        {
+            industry: '完成車メーカー',
+            image: './industry_auto_1773122610393.png',
+            details: ['車両単位 CO2 算定', '材料 DB 構築', '製造、走行、廃棄原単位データ構築', '環境影響評価方法の調査分析']
+        },
+        {
+            industry: '部品メーカー',
+            image: './feature_supply_1773123157967.png',
+            details: ['電池規則対応 CFP 算定', 'コンプレッサー CFP 算定', 'ハーネス製品 CFP 算定', 'アジア、欧州の再エネ、充電インフラ調査']
+        },
+        {
+            industry: '化学メーカー',
+            image: './industry_chem_1773122647243.png',
+            details: ['ラベル CFP 算定', 'ポリエチレンシート CFP 算定', '活性剤、油性材の CFP 算定', 'エンジニアプラスチック CFP 算定']
+        },
+        {
+            industry: '鉄鋼・製紙メーカー・他',
+            image: './industry_steel_1773122623070.png',
+            details: ['工場単位、製品単位 CO2 算定', '鉄粉新製法の排出量シミュレーション', 'ステンレス材の CBAM、EPD 用算定', '水素活用時の排出量シミュレーション']
+        }
     ];
 
     return (
         <section className="achievements section bg-light">
             <h2 className="section-title">製造メーカーでの算定実績</h2>
             <p style={{ textAlign: 'center', color: 'var(--text-muted)', marginBottom: '40px' }}>
-                輸送機器メーカーさまや車両メーカーさまなど、さまざまな業種の企業さまのご支援実績があります。
+                完成車、部品、化学、鉄鋼・製紙など、さまざまな製造領域での算定・調査支援実績があります。
             </p>
-            <div className="achievements-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+            <div className="achievements-grid">
                 {achievements.map((ach, i) => (
                     <div key={i} className="achievement-card" style={{ display: 'flex', flexDirection: 'column', background: 'var(--white)', borderRadius: 'var(--radius-md)', borderTop: 'none', boxShadow: 'var(--shadow-sm)', overflow: 'hidden', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}>
-                        <div style={{ width: '100%', height: '180px', background: '#f8f9fa' }}>
+                        <div style={{ width: '100%', height: '210px', background: '#f8f9fa' }}>
                             <img src={ach.image} alt={ach.industry} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         </div>
-                        <div style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                        <div style={{ padding: '28px', flex: 1, display: 'flex', flexDirection: 'column', gap: '16px' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                                 <Building2 size={24} color="var(--primary)" />
-                                <div style={{ fontWeight: 'bold', fontSize: '18px' }}>{ach.industry}</div>
+                                <div style={{ fontWeight: 'bold', fontSize: '20px' }}>{ach.industry}</div>
                             </div>
-                            <div style={{ color: 'var(--primary)', fontSize: '14px', fontWeight: 'bold' }}>{ach.type}</div>
-                            <ul style={{ listStyleType: 'disc', paddingLeft: '20px', color: 'var(--text-muted)', fontSize: '14px', margin: 0 }}>
+                            <ul style={{ listStyleType: 'disc', paddingLeft: '22px', color: 'var(--text-main)', fontSize: '15px', lineHeight: 1.8, margin: 0 }}>
                                 {ach.details.map((detail, idx) => (
-                                    <li key={idx} style={{ marginBottom: '4px' }}>{detail}</li>
+                                    <li key={idx}>{detail}</li>
                                 ))}
                             </ul>
                         </div>

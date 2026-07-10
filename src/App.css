@@ -304,6 +304,12 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
 .achievement-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg) !important;
@@ -360,6 +366,10 @@ body {
     flex-direction: column;
     gap: 16px;
     text-align: center;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
   }
 
   .nav-links {
