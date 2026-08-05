@@ -6,10 +6,12 @@
 
 ## 🚀 起動方法
 
-### 1. このフォルダに移動してから起動
+### 1. リポジトリを取得して起動
 
-```
-cd C:\Users\aomar\Documents\projects\work2-codex\lca-cfp-page-preview
+```powershell
+git clone https://github.com/Takii-252/lca-cfp-page-preview.git
+cd lca-cfp-page-preview
+npm install
 npm run dev
 ```
 
